@@ -7,9 +7,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script>
+        // Mouse-responsive boid behavior for blobs
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth) * 100;
+            mouseY = (e.clientY / window.innerHeight) * 100;
+            
+            // Update CSS custom properties for blob positions
+            document.documentElement.style.setProperty('--mouse-x', mouseX + '%');
+            document.documentElement.style.setProperty('--mouse-y', mouseY + '%');
+        });
+        
+        // Initialize mouse position
+        document.documentElement.style.setProperty('--mouse-x', '50%');
+        document.documentElement.style.setProperty('--mouse-y', '50%');
+    </script>
     <main class="container">
         <header class="hero">
             <div class="profile-photo">
@@ -24,19 +43,21 @@
 
         <section class="availability-banner">
             <div class="banner-content">
-                <div class="banner-info">
-                    <span class="status-indicator">Available July 2025</span>
-                    <p class="banner-text">Seeking project management and business analyst roles in Gold Coast/Brisbane area</p>
+                <div class="banner-left">
+                    <div class="status-dot"></div>
+                    <span class="status-text">Available for PM & BA roles<span class="mobile-hide"> • Starting July 2025</span></span>
                 </div>
-                <a href="mailto:a.dhar150998@gmail.com" class="banner-cta">Let's Chat</a>
+                <a href="mailto:a.dhar150998@gmail.com" class="banner-cta">Get in touch</a>
             </div>
         </section>
 
         <section class="about">
-            <p class="bio">Recent Master of Information Technology graduate with hands-on experience in project management and business analysis. I solve complex problems by connecting technology with real business needs, with expertise spanning financial technology and agricultural tech projects.</p>
+            <h2 class="section-label">About</h2>
+            <p class="bio">Recent Master of Information Technology graduate with hands-on experience in project management and business analysis. I solve complex problems by connecting technology with real business needs.</p>
         </section>
 
         <section class="experience">
+            <h2 class="section-label">Experience</h2>
             <div class="role">
                 <div class="role-header">
                     <h3 class="company">Griffith University</h3>
@@ -56,13 +77,14 @@
             <div class="role">
                 <div class="role-header">
                     <h3 class="company">Smart Innovations Ltd</h3>
-                    <span class="period">2022—2023</span>
+                    <span class="period">2022—23</span>
                 </div>
                 <p class="position">Business Analyst</p>
             </div>
         </section>
 
         <section class="skills">
+            <h2 class="section-label">Skills</h2>
             <div class="skill-group">
                 <span class="skill">Project Management</span>
                 <span class="skill">Business Analysis</span>
@@ -74,10 +96,11 @@
         </section>
 
         <section class="education">
+            <h2 class="section-label">Education</h2>
             <div class="degree">
                 <div class="degree-header">
                     <h3 class="university">Griffith University</h3>
-                    <span class="year">2025</span>
+                    <span class="year">2023—25</span>
                 </div>
                 <p class="qualification">Master of Information Technology</p>
             </div>
@@ -86,11 +109,16 @@
 
         <footer class="contact">
             <div class="links">
-                <a href="mailto:a.dhar150998@gmail.com" class="link">Email</a>
-                <a href="https://www.linkedin.com/in/arpitadhar/" class="link">LinkedIn</a>
-                <a href="https://github.com/arpita-dhar" class="link">GitHub</a>
+                <a href="mailto:a.dhar150998@gmail.com" class="link" title="Email">
+                    <i class="bi bi-envelope-fill"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/arpitadhar/" class="link" title="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/arpita-dhar" class="link" title="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
             </div>
         </footer>
-    </main>
 </body>
 </html>
