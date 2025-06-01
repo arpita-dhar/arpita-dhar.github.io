@@ -1,0 +1,297 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.5;
+    color: #1a1a1a;
+    background: #fafafa;
+}
+
+/* Layout */
+.container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-photo {
+    flex-shrink: 0;
+}
+
+.photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f0f0f0;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+/* Typography */
+.name {
+    font-size: 1.875rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 1.125rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.location {
+    font-size: 0.875rem;
+    color: #999;
+    font-weight: 300;
+    margin-top: 0.25rem;
+}
+
+.bio {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 300;
+    max-width: 480px;
+}
+
+/* Experience section */
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.role {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.company {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.period {
+    font-size: 0.875rem;
+    color: #999;
+    font-weight: 300;
+    font-variant-numeric: tabular-nums;
+}
+
+.position {
+    font-size: 0.875rem;
+    color: #666;
+    font-weight: 400;
+}
+
+/* Skills */
+.skill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill {
+    font-size: 0.875rem;
+    color: #666;
+    padding: 0.375rem 0.75rem;
+    background: #f5f5f5;
+    border-radius: 6px;
+    font-weight: 400;
+}
+
+/* Availability Banner */
+.availability-banner {
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.banner-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.status-indicator {
+    display: inline-block;
+    background: #c4b5fd;
+    color: #5b21b6;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    width: fit-content;
+}
+
+.banner-text {
+    font-size: 0.875rem;
+    color: #555;
+    margin: 0;
+    font-weight: 400;
+}
+
+.banner-cta {
+    background: #7c3aed;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.banner-cta:hover {
+    background: #6d28d9;
+    transform: translateY(-1px);
+}
+
+/* Education */
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.degree {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.degree-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.university {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.year {
+    font-size: 0.875rem;
+    color: #999;
+    font-weight: 300;
+    font-variant-numeric: tabular-nums;
+}
+
+.qualification {
+    font-size: 0.875rem;
+    color: #666;
+    font-weight: 400;
+}
+
+
+/* Contact */
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.link {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: #1a1a1a;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 3rem 1.5rem;
+        gap: 2.5rem;
+    }
+    
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        text-align: left;
+    }
+    
+    .name {
+        font-size: 1.5rem;
+    }
+    
+    .role-header,
+    .degree-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.125rem;
+    }
+    
+    .banner-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+    
+    .name {
+        font-size: 1.75rem;
+    }
+}
